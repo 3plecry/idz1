@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ІДЗ №1 з курсу 'Веб-розробка' - Калькулятор Відпустки">
+    <meta name="keywords" content="ІДЗ, університет, веб-розробка, калькулятор відпустки, HTML, CSS, JavaScript">
+    <title>Калькулятор Відпустки</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Калькулятор Відпустки</h1>
+
+        <div class="holidays-section">
+            <label for="holidays">Святкові дні (дати, що не входять у відпустку):</label>
+            <textarea id="holidays"
+                placeholder="Введіть дати, розділені комами або новими рядками (наприклад, 2026-01-01, 2026-09-19)"></textarea>
+            <div class="field-description">Ці дні будуть виключені з тривалості відпустки.</div>
+        </div>
+        <br>
+        <div class="input-group">
+            <label for="startDate">Дата Початку:</label>
+            <input type="date" id="startDate">
+            <div class="field-description">Якщо відомо, введіть дату початку.</div>
+        </div>
+
+        <div class="input-group">
+            <label for="endDate">Дата Завершення:</label>
+            <input type="date" id="endDate">
+            <div class="field-description">Якщо відомо, введіть дату завершення.</div>
+        </div>
+
+        <div class="input-group">
+            <label for="duration">Тривалість відпустки (днів):</label>
+            <input type="number" id="duration" min="1" placeholder="Введіть тривалість">
+            <div class="field-description">Якщо відомо, введіть кількість днів.</div>
+        </div>
+
+        <button onclick="calculateVacation()">Розрахувати невідомий параметр</button>
+
+        <div class="result" id="resultOutput">
+            Введіть два з трьох параметрів для розрахунку.
+        </div>
+    </div>
+</body>
+
+</html>
